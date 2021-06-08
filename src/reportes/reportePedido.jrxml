@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="4"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="Reporte">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detallePedidos."idDetallePedido" AS detallePedidos_idDetallePedido,
+     detallePedidos."idPedido" AS detallePedidos_idPedido,
+     detallePedidos."idProducto" AS detallePedidos_idProducto,
+     detallePedidos."precioUnitario" AS detallePedidos_precioUnitario,
+     detallePedidos."cantidad" AS detallePedidos_cantidad,
+     detallePedidos."descuento" AS detallePedidos_descuento,
+     pedidos."idPedido" AS pedidos_idPedido,
+     pedidos."idCliente" AS pedidos_idCliente,
+     pedidos."idEmpleado" AS pedidos_idEmpleado,
+     pedidos."fechaPedido" AS pedidos_fechaPedido,
+     pedidos."direccionEnvio" AS pedidos_direccionEnvio,
+     productos."idProducto" AS productos_idProducto,
+     productos."nombreProducto" AS productos_nombreProducto,
+     productos."idProveedor" AS productos_idProveedor,
+     productos."idCategoria" AS productos_idCategoria,
+     productos."cantidadEnStock" AS productos_cantidadEnStock,
+     productos."precioUnitario" AS productos_precioUnitario,
+     productos."descontinuado" AS productos_descontinuado
+FROM
+     "dbo"."pedidos" pedidos INNER JOIN "dbo"."detallePedidos" detallePedidos ON pedidos."idPedido" = detallePedidos."idPedido"
+     INNER JOIN "dbo"."productos" productos ON detallePedidos."idProducto" = productos."idProducto"]]>
+		</queryString>
+		<field name="detallePedidos_idDetallePedido" class="java.lang.Integer"/>
+		<field name="detallePedidos_cantidad" class="java.lang.Integer"/>
+		<field name="detallePedidos_descuento" class="java.lang.Integer"/>
+		<field name="pedidos_idCliente" class="java.lang.Integer"/>
+		<field name="productos_nombreProducto" class="java.lang.String"/>
+		<field name="productos_precioUnitario" class="java.math.BigDecimal"/>
+		<field name="detallePedidos_precioUnitario" class="java.math.BigDecimal"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     detallePedidos."idDetallePedido" AS detallePedidos_idDetallePedido,
+     detallePedidos."idPedido" AS detallePedidos_idPedido,
+     detallePedidos."idProducto" AS detallePedidos_idProducto,
+     detallePedidos."precioUnitario" AS detallePedidos_precioUnitario,
+     detallePedidos."cantidad" AS detallePedidos_cantidad,
+     detallePedidos."descuento" AS detallePedidos_descuento,
+     pedidos."idPedido" AS pedidos_idPedido,
+     pedidos."idCliente" AS pedidos_idCliente,
+     pedidos."idEmpleado" AS pedidos_idEmpleado,
+     pedidos."fechaPedido" AS pedidos_fechaPedido,
+     pedidos."direccionEnvio" AS pedidos_direccionEnvio,
+     productos."idProducto" AS productos_idProducto,
+     productos."nombreProducto" AS productos_nombreProducto,
+     productos."idProveedor" AS productos_idProveedor,
+     productos."idCategoria" AS productos_idCategoria,
+     productos."cantidadEnStock" AS productos_cantidadEnStock,
+     productos."precioUnitario" AS productos_precioUnitario,
+     productos."descontinuado" AS productos_descontinuado
+FROM
+     "dbo"."pedidos" pedidos INNER JOIN "dbo"."detallePedidos" detallePedidos ON pedidos."idPedido" = detallePedidos."idPedido"
+     INNER JOIN "dbo"."productos" productos ON detallePedidos."idProducto" = productos."idProducto"]]>
+	</queryString>
+	<field name="detallePedidos_idDetallePedido" class="java.lang.Integer"/>
+	<field name="detallePedidos_cantidad" class="java.lang.Integer"/>
+	<field name="detallePedidos_descuento" class="java.lang.Integer"/>
+	<field name="detallePedidos_precioUnitario" class="java.math.BigDecimal"/>
+	<field name="pedidos_idCliente" class="java.lang.Integer"/>
+	<field name="productos_nombreProducto" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="26" y="41" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="10" width="163" height="25"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Reporte de Pedidos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="227" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="1" y="0" width="360" height="140"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Reporte">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="75">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Num.Pedidos]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="75" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{detallePedidos_idDetallePedido}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Cantidad]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="67" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{detallePedidos_cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="71">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="71" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descuentos]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="71" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{detallePedidos_descuento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="72">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="72" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Clientes]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="72" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{pedidos_idCliente}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="77">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="77" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Producto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="77" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{productos_nombreProducto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="73">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="73" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Precio]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="73" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{productos_precioUnitario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="82">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="table 2_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="82" height="30"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[PrecioUnitario.Pedidos]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="82" height="20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{detallePedidos_precioUnitario}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="291" y="19" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
